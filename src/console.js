@@ -10,7 +10,7 @@ var CodeMirror;
     this[name] = definition();
   }
 })('Console',function(){
-  class Console {
+  return class Console {
     constructor(element, options = {}) {
       options.theme = options.theme || 'eclipse';
       options.mode = options.mode || 'javascript';

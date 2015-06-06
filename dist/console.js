@@ -16,7 +16,7 @@ var CodeMirror;
     this[name] = definition();
   }
 })('Console', (function () {
-  var Console = (function () {
+  return (function () {
     function Console(element) {
       var _this = this;
 
