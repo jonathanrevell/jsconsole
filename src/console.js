@@ -1,6 +1,15 @@
-
-
-var Console = (function(){
+var CodeMirror;
+(function(name, definition) {
+  if( typeof module !== 'undefined' && module.exports ) {
+    CodeMirror = require('codemirror');
+    module.exports = definition();
+  } else if(typeof define !== 'undefined' && define.amd ) {
+    define(definition);
+  } else {
+    CodeMirror = window.CodeMirror;
+    this[name] = definition();
+  }
+})('Console',function(){
   class Console {
     constructor(element, options = {}) {
       options.theme = options.theme || 'eclipse';
@@ -335,5 +344,6 @@ var Console = (function(){
 
   return Console;
 }());
+
 
 
