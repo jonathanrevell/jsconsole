@@ -15,8 +15,8 @@ var CodeMirror;
     CodeMirror = window.CodeMirror;
     this[name] = definition();
   }
-})('Console', (function () {
-  return (function () {
+})('Console', function () {
+  var Console = (function () {
     function Console(element) {
       var _this = this;
 
@@ -414,7 +414,7 @@ var CodeMirror;
   }
 
   return Console;
-})());
+});
 // ^C
 // don't need to do
 // anything here yet.
